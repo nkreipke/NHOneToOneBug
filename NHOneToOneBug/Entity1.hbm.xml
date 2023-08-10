@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="NHOneToOneBug"
+                   namespace="NHOneToOneBug">
+
+    <class name="Entity1">
+        <id name="Id">
+            <generator class="guid"/>
+        </id>
+        <one-to-one name="Child" cascade="all-delete-orphan" constrained="true" />
+    </class>
+
+</hibernate-mapping>
+
